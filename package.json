@@ -1,0 +1,22 @@
+{
+  "name": "cleanblog",
+  "version": "1.0.0",
+  "description": "Blog Script",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "keywords": [
+    "blog",
+    "post"
+  ],
+  "author": "Orhan Nurullah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
