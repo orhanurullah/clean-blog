@@ -1,0 +1,28 @@
+.title{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 1px 1px 0 0 lightcoral;
+    padding-right: 6px;
+}
+.navbar a {
+    color:white !important;
+}
+.navbar{
+}
+@media screen and (min-width:993px) {
+    .title{
+        margin-right:19% !important;
+    }
+    ul + form{
+        padding-left: 20px;
+    }
+}
+@media screen and (min-width:1130px) {
+    .title{
+        margin-right:29% !important;
+    }
+    ul + form{
+        padding-left: 20px;
+    }
+}
