@@ -35,8 +35,12 @@ app.post('/add-post', async (req, res) => {
     await Post.create(req.body);
     res.redirect('/');
 })
-app.get('/post', (req,res) => {
-    res.render('post');
+app.get('/post/:id', async (req,res) => {
+    const post = await Post.findById(req.params.id);
+    console.log(post);
+    res.render('post', {
+        post
+    });
 });
 const port = 3000;
 app.listen(port, () => {
