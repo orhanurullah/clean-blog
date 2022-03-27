@@ -9,6 +9,10 @@
   <header class="masthead mt-5" style="background-image: url('img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
+      <div class="pt-3 bg-secondary d-flex justify-content-center">
+          <a class="btn btn-primary" href="/posts/update/<%= post._id %>">Update</a>
+          <a class="btn btn-danger" href="/posts/<%= post._id %>?_method=DELETE" onclick="confirm('Yes or No')">Delete</a>
+      </div>
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading mt-4">
