@@ -9,10 +9,14 @@ const mongoose = require("mongoose");
 const app = express();
 
 //Connect Db
-mongoose.connect("mongodb://localhost/cleanblog-test-db", {
+mongoose.connect("mongodb+srv://orhan:5R7X3RZcjxPiCQu1@cluster0.j9uj8.mongodb.net/clean-blog-db?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+}).then(() => {
+  console.log('DB Connected');
+}).catch((err) => {
+  console.log('DB connection error', err);
+})
 
 app.set("view engine", "ejs");
 // MIDDLEWARES
@@ -34,7 +38,7 @@ app.get("/posts/:id", postController.getPost);
 app.get("/posts/update/:id", pageController.getUpdatePage);
 app.put("/posts/:id", postController.editPost);
 app.delete('/posts/:id', postController.deletePost);
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Clean Blog starts on ${port} port`);
 });
